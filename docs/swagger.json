@@ -1,13 +1,42 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "{{.Description}}",
-        "title": "{{.Title}}",
+        "description": "测试",
+        "title": "测试",
         "contact": {},
         "license": {},
-        "version": "{{.Version}}"
+        "version": "0.0.1"
     },
     "host": "{{.Host}}",
-    "basePath": "{{.BasePath}}",
-    "paths": {}
+    "basePath": "/api/v1/",
+    "paths": {
+        "/record/{some_id}": {
+            "get": {
+                "description": "get record by ID",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "userId",
+                        "name": "some_id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
