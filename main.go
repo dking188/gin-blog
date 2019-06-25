@@ -69,13 +69,11 @@ func main() {
 	//r := setupRouter()
 	// Listen and Server in 0.0.0.0:8080
 	//r.Run(":8080")
-	r := gin.New()
 
+	r := gin.New()
 	// 创建路由组
 	v1 := r.Group("/api/v1")
-
 	v1.GET("/record/:userId", record)
-
 	// 文档界面访问URL
 	// http://127.0.0.1:8080/swagger/index.html
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
