@@ -1,6 +1,6 @@
-ProjectName: gin-blog
-Auht:Dking
-Email:dking@188.com
+ProjectName:  gin-blog <br>
+Auth: Dking <br>
+Email: dking@188.com <br>
 
 
 
